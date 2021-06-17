@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+		http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+
+    <persistence-unit name="COFFEE_SORT_APP_PU" transaction-type="RESOURCE_LOCAL">
+        <class>main.java.domain.CoffeeSort</class>
+        <provider>
+            org.eclipse.persistence.jpa.PersistenceProvider
+        </provider>
+
+        <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:h2:file:./db/coffeeSortsDB;DB_CLOSE_ON_EXIT=TRUE;"/>
+            <property name="javax.persistence.jdbc.user" value=""/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="eclipselink.logging.level" value="INFO"/>
+
+        </properties>
+        <class>main.java.domain.CoffeeSort</class>
+    </persistence-unit>
+</persistence>
